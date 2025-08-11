@@ -1,14 +1,42 @@
 package strings;
-class ReverseWordsInAStringLC151 {
+
+import java.util.Arrays;
+
+class LC151ReverseWordsInAString {
 	
 	public static void main(String[] args) {
-        ReverseWordsInAStringLC151 solution = new ReverseWordsInAStringLC151();
+        LC151ReverseWordsInAString solution = new LC151ReverseWordsInAString();
         String input = " hello    world ";
-        String result = solution.reverseWords(input);
+        String result = solution.reverseWordsBF(input);
         System.out.println("Output: \"" + result + "\"");
     }
 	
-    public String reverseWords(String s) {
+    private String reverseWordsBF(String s) {
+
+    	s=s.trim();
+    	
+    	String[] words=s.split("\\s+");
+
+    	int n=words.length;
+    	
+
+    	//Arrays.stream(words).forEach(System.out::println);
+
+    	StringBuilder res=new StringBuilder();
+    	
+    	for(int i=n-1;i>=0;i--)
+    	{
+    		res.append(words[i]);
+    		if(i!=0)
+    		{
+    			res.append(" ");
+    		}
+    	}
+    	
+    	return res.toString();
+	}
+
+	public String reverseWords(String s) {
         // Convert string to char array for in-place modification
         char[] arr = s.toCharArray();
         int n = arr.length;
