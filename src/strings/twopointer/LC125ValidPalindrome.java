@@ -1,4 +1,4 @@
-package strings;
+package strings.twopointer;
 
 public class LC125ValidPalindrome {
 	/*

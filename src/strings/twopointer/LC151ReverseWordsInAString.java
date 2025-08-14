@@ -1,4 +1,4 @@
-package strings;
+package strings.twopointer;
 
 import java.util.Arrays;
 

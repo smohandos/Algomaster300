@@ -1,4 +1,4 @@
-package strings;
+package strings.stringmanipulation;
 
 public class LC6ZigzagConversion {
 	/*
